@@ -1,3 +1,220 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ======================================================
+   Responsive Utilities
+   Append at the end of index.css
+====================================================== */
+
+/* Global Reset */
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+video,
+svg,
+canvas,
+iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive Typography */
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+p {
+  line-height: 1.7;
+}
+
+/* Responsive Container */
+.responsive-container {
+  width: min(100%, 1280px);
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 4vw, 2rem);
+}
+
+/* Responsive Grid */
+.responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Responsive Flex */
+.responsive-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* ===========================
+   Large Screens
+=========================== */
+@media (max-width: 1200px) {
+  section {
+    padding-inline: 2rem;
+  }
+
+  h1 {
+    font-size: clamp(2.3rem, 5vw, 3.5rem);
+  }
+}
+
+/* ===========================
+   Tablets
+=========================== */
+@media (max-width: 992px) {
+  html {
+    font-size: 15px;
+  }
+
+  section {
+    padding: 3rem 1.5rem;
+  }
+
+  .responsive-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===========================
+   Mobile
+=========================== */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  section {
+    padding: 2.5rem 1rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .responsive-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .responsive-flex {
+    flex-direction: column;
+  }
+
+  button,
+  .btn {
+    width: 100%;
+    min-height: 44px;
+  }
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* ===========================
+   Small Phones
+=========================== */
+@media (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
+
+  section {
+    padding: 2rem 0.75rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Landscape Phones */
+@media (max-height: 500px) and (orientation: landscape) {
+  section {
+    padding-block: 1.5rem;
+  }
+}
+
+/* Utility Classes */
+.hide-mobile {
+  display: block;
+}
+
+.show-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none !important;
+  }
+
+  .show-mobile {
+    display: block !important;
+  }
+}
+
+.text-responsive {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+}
+
+.heading-responsive {
+  font-size: clamp(2rem, 6vw, 4rem);
+  line-height: 1.1;
+}
+
