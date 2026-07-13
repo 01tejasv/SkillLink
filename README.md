@@ -19,6 +19,10 @@
 - [Deployment](#deployment)
 - [Project Structure](#project-structure)
 - [API Documentation](#api-documentation)
+- [User Guide](#user-guide)
+- [FAQ](#faq)
+- [Roadmap](#roadmap)
+- [Support](#support)
 - [Contributing](#contributing)
 - [License](#license)
 
